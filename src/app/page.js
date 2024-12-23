@@ -2,10 +2,16 @@ import Department from "@/components/department/Department";
 import News from "@/components/news/News";
 import UploadDocument from "@/components/orther/UploadDocument";
 import { Image } from "antd";
+import { getBasePath } from "../../helper";
 export default function Home() {
   return (
     <div className="">
-      <div className="h-[50vh] bg-[url('/banner.jpg')] bg-cover bg-center mt-16 relative">
+      <div
+        style={{
+          backgroundImage: `url(${getBasePath("/banner.jpg")})`, // Thêm basePath
+        }}
+        className="h-[50vh]  bg-cover bg-center mt-16 relative"
+      >
         {/* <Image
           preview={false}
           src="/banner.jpg"
@@ -18,7 +24,9 @@ export default function Home() {
       </div>
       <div className="max-w-[1440px] mx-auto">
         <div>
-          <h2 className="my-5 font-title text-2xl font-medium">Thêm tài liệu để được nhận thưởng </h2>
+          <h2 className="my-5 font-title text-2xl font-medium">
+            Thêm tài liệu để được nhận thưởng{" "}
+          </h2>
           <div className="p-4 border-[2px] border-solid border-[#e8eef7] rounded-lg">
             <UploadDocument />
           </div>

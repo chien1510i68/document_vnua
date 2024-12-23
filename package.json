@@ -2,12 +2,12 @@
   "name": "dowload-document",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
+ "scripts": {
+    "dev": "next dev -p 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "next lint"
-  },
+  }, 
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
     "antd": "^5.21.6",

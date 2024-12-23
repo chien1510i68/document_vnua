@@ -1,4 +1,5 @@
 import { Image } from "antd";
+import { getBasePath } from "../../../helper";
 
 export default function NewItem({ data }) {
   return (
@@ -8,12 +9,18 @@ export default function NewItem({ data }) {
       hover:shadow-lg hover:shadow-[#85858f6b]"
     >
       <div className="text-center w-full ">
-        <Image src="/imgae_notification.png" preview={false} style={{height : "120px"}} />
+        <Image
+          src={getBasePath("/imgae_notification.png")}
+          preview={false}
+          style={{ height: "120px" }}
+        />
       </div>
       <div className="my-3">
         {/* <Image src="/icon_notification.png" preview={false} style={{width : "40px" , color : "red"}}/> */}
         <h2 className="line-clamp-1 text-base">{data?.title}</h2>
-        <h2 className=" text-left my-1 text-base">Ngày cập nhật : {data?.date}</h2>
+        <h2 className=" text-left my-1 text-base">
+          Ngày cập nhật : {data?.date}
+        </h2>
         <a
           className="text-blue-300 hover:text-amber-800 text-base"
           href="https://daotao.vnua.edu.vn/default.aspx?page=danhsachthongtin&type=1"

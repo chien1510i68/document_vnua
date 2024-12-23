@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import { Button } from "antd";
+import { useState } from "react";
 import CourseItem from "../courses/CourseItem";
 import ModalDetail from "../modal/ModalDetail";
-import { Button, notification } from "antd";
 
 export default function DepartmentItem({ data }) {
   const [visibleItems, setVisibleItems] = useState(4);
